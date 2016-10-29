@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>react-helper-pack</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="main">
+    <header>
+      <div class="buttons">
+        <a href="https://github.com/Barry127/react-helper-pack" target="blank">
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      <h1>react-helper-pack</h1>
+    </header>
+    <section>
+      <nav>
+        <h2>Getting Started</h2>
+        <ul>
+          <li>
+            <a href="#welcome">Welcome</a>
+          </li>
+          <li>
+            <a href="#installation">Installation</a>
+          </li>
+          <li>
+            <a href="#license">License</a>
+          </li>
+        </ul>
+        <h2>Methods</h2>
+        <ul>
+          <li>
+            <a href="#filterEvents">Filter Events</a>
+          </li>
+        </ul>
+      </nav>
+      <article>
+        <h2>Getting Started</h2>
+        <h3 id="welcome">Welcome</h3>
+        <p>react-helper-pack is a collection of helper functions to create your own React components. I was copy-pasting a lot of code between different React projects, this collection is a set of reusable code to keep my development DRY.</p>
+        <h3 id="installation">Installation</h3>
+        <p>The easiest way to install react-helper-pack is using npm and import the functions to your files.</p>
+        <pre><code class="bash">npm install --save react-helper-pack</code></pre>
+        <pre><code class="javascript">// Load everything
+import * as reactHelpers from 'react-helper-pack';
+
+// Load specific methods
+import { filterEvents } from 'react-helper-pack';</code></pre>
+        <p>Clone the repo to run tests.</p>
+        <pre><code class="bash">git clone https://github.com/Barry127/react-helper-pack.git
+cd react-helper-pack
+npm run test</code></pre>
+        <h3 id="license">License</h3>
+        <p>Copyright (c) 2016 Barry de Kleijn</p>
+        <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+        <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+        <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        <h2>Methods</h2>
+        <h3 id="filterEvents">filterEvents</h3>
+        <pre><code class="javascript">filterEvents(props, [ignore])</code></pre>
+        <p>Takes a set of props and filter it to only return the events.</p>
+        <h4>Arguments</h4>
+        <ul class="types">
+          <li><code>props <i>(Object)</i></code>: The props object to filter from.</li>
+          <li><code>[ignore] <i>(Array|String)</i></code>: events to ignore (to not return).</li>
+        </ul>
+        <h4>Returns</h4>
+        <ul class="types">
+          <li><code><i>(Object)</i></code>: Object only containing events.
+        </ul>
+        <h4>Example</h4>
+        <pre><code class="javascript">import { filterEvents } from 'react-helper-pack';
+
+const props = {
+  disabled: true,
+  someKey: 'someValue',
+  onClick: () => console.log('click'),
+  onMouseDown () => console.log('mousedown')
+};
+
+filterProps(props);
+// => { onClick: [Function], onMouseDown: [Function] }
+
+filterProps(props, ['onMouseDown']);
+// => { onClick: [Function] }
+</code></pre>
+      </article>
+    </section>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
