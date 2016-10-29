@@ -4,7 +4,8 @@
   "description": "A collection of react helper functions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:babel-core/register --recursive ./src/**/*.spec.js",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/Barry127/react-helper-pack/issues"
   },
-  "homepage": "https://github.com/Barry127/react-helper-pack#readme"
+  "homepage": "https://github.com/Barry127/react-helper-pack#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
 }
