@@ -1,0 +1,24 @@
+{
+  "name": "react-helper-pack",
+  "version": "0.0.1",
+  "description": "A collection of react helper functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barry127/react-helper-pack.git"
+  },
+  "keywords": [
+    "react",
+    "helper",
+    "functions"
+  ],
+  "author": "Barry de Kleijn <kleijn.barry@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Barry127/react-helper-pack/issues"
+  },
+  "homepage": "https://github.com/Barry127/react-helper-pack#readme"
+}
