@@ -31,3 +31,9 @@ console.log(events);
 // Returns:
 // { onClick: myOnClickFunction }
 ```
+
+## Changelog
+
+### 0.1.1
+
+ * fix exporting

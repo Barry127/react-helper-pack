@@ -1,1 +1,1 @@
-export { default as filterProps } from './src/filterProps';
+export { default as filterEvents } from './src/filterEvents';
