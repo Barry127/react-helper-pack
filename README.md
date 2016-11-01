@@ -34,6 +34,9 @@ console.log(events);
 
 ## Changelog
 
+### 0.1.2
+ * Add build script should work fine now from npm
+
 ### 0.1.1
 
  * fix exporting
