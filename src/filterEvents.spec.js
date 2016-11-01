@@ -49,6 +49,17 @@ describe('filterEvents', () => {
     expect(filterEvents(props, ignore)).to.eql(expected);
   });
 
+  it('does not return a non exisiting event', () => {
+    props.onFakeEvent = 'onFakeEvent';
+    const expected = {
+      onBlur: 'onBlur-event',
+      onClick: 'onClick-event',
+      onKeyPress: 'onKeyPress-event',
+      onMouseUp: 'onMouseUp-event'
+    };
+    expect(filterEvents(props)).to.eql(expected);
+  });
+
   it('throws a TypeError if the props argument is not of type object', () => {
     const props = undefined;
     expect(filterEvents.bind(null, props)).to.throw(TypeError);
