@@ -49,6 +49,7 @@
         <h2>Methods</h2>
         <ul>
           <li>
+            <a href="#bindMethods">Bind Methods</a>
             <a href="#filterEvents">Filter Events</a>
           </li>
         </ul>
@@ -75,6 +76,41 @@ npm run test</code></pre>
         <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
         <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
         <h2>Methods</h2>
+        <h3 id="bindMethods">bindMethods</h3>
+        <pre><code class="javascript">bindMethods(instance, [methods])</code></pre>
+        <p>Take a Component instance and bind given methods. If no methods are given all methods will be bound. This excludes React Component methods.</p>
+        <h4>Arguments</h4>
+        <ul class="types">
+          <li><code>instance <i>(Object)</i></code>: Current React Component instance (usually this).</li>
+          <li><code>[methods] <i>(Array|String)</i></code>: Methods to bind, if none given all instance methods will be bound.</li>
+        </ul>
+        <h4>Returns</h4>
+        <ul class="types">
+          <li><code><i>(Void)</i></code>: undefined
+        </ul>
+        <h4>Example</h4>
+        <pre><code class="javascript">import { bindMethods } from 'react-helper-pack';
+
+class MyComponent extends Component {
+
+  constructor () {
+    super();
+    bindMethods(this, ['onClick']);
+  }
+
+  dontBindThisMethod () {
+    // ... this method will not be bound
+  }
+
+  onClick (ev) {
+    // ... do something here
+  }
+
+  render () {
+    // ... render component
+  }
+}
+</code></pre>
         <h3 id="filterEvents">filterEvents</h3>
         <pre><code class="javascript">filterEvents(props, [ignore])</code></pre>
         <p>Takes a set of props and filter it to only return the events.</p>
