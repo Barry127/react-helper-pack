@@ -16,10 +16,10 @@ _bindMethods (instance, [methods])_
  * **instance** Current React Component instance (usually this)
  * **methods** (optional) array of methods to bind. If none is given all methods will be bound
 
- ```javascript
- import { bindMethods } from 'react-helper-pack';
+```javascript
+import { bindMethods } from 'react-helper-pack';
 
- class MyComponent extends Component {
+class MyComponent extends Component {
 
   constructor () {
     super();
@@ -37,7 +37,7 @@ _bindMethods (instance, [methods])_
   render () {
     // render component
   }
- }
+}
  ```
 
 #### filterEvents
