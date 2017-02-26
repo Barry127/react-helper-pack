@@ -65,6 +65,10 @@ console.log(events);
 
 ## Changelog
 
+### 0.2.0
+ * Add bindMethods
+ * Add package name to errors
+
 ### 0.1.2
  * Add build script should work fine now from npm
 
