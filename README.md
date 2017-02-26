@@ -31,11 +31,11 @@ class MyComponent extends Component {
   }
 
   onClick (ev) {
-    // ...do something here
+    // ... do something here
   }
 
   render () {
-    // render component
+    // ... render component
   }
 }
  ```
