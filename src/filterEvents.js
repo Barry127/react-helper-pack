@@ -98,7 +98,7 @@ export const eventsList = [
 
 export default function filterEvents (props, ignore = []) {
   if (typeof props !== 'object') {
-    throw new TypeError('Argument props must be type object');
+    throw new TypeError('[react-helper-pack]: filterEvents: Argument props must be type object');
   }
 
   if (typeof ignore === 'string') {
@@ -106,7 +106,7 @@ export default function filterEvents (props, ignore = []) {
   }
 
   if (!Array.isArray(ignore)) {
-    throw new TypeError('Argument ignore must be of type array or string');
+    throw new TypeError('[react-helper-pack]: filterEvents: Argument ignore must be of type array or string');
   }
 
   let events = {};
