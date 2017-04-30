@@ -78,7 +78,7 @@ export const eventsList = [
   'onSeeked',
   'onSeeking',
   'onStalled',
-  'onSuspended',
+  'onSuspend',
   'onTimeUpdate',
   'onVolumeChange',
   'onWaiting',
