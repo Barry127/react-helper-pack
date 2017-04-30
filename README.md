@@ -65,6 +65,10 @@ console.log(events);
 
 ## Changelog
 
+
+### 0.2.1
+ * Fix typo in Media Events
+
 ### 0.2.0
  * Add bindMethods
  * Add package name to errors
